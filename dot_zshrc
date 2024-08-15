@@ -163,7 +163,6 @@ alias ls='LC_COLLATE=C colorls -h --group-directories-first --color=auto'
 # Color ls with icons
 source $(dirname $(gem which colorls))/tab_complete.sh
 
-alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 export PATH="$PATH:/opt/nvim"
 
 # bun completions
