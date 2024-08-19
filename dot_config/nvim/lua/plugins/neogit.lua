@@ -1,3 +1,4 @@
+return {}
 -- return {
 --   "NeogitOrg/neogit",
 --   dependencies = {
