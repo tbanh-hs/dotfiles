@@ -133,7 +133,7 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias zshconfig="code ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 alias dev="cd $ROOT/Projects"
 
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
@@ -164,6 +164,7 @@ alias ls='LC_COLLATE=C colorls -h --group-directories-first --color=auto'
 # Color ls with icons
 source $(dirname $(gem which colorls))/tab_complete.sh
 
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim"
 
 # bun completions
@@ -176,5 +177,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-PATH=~/.console-ninja/.bin:$PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
