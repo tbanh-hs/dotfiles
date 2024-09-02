@@ -27,6 +27,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.cmd 'autocmd BufEnter * set formatoptions-=cro'
 vim.cmd 'autocmd BufEnter * setlocal formatoptions-=cro'
 
+-- Line number
+vim.cmd 'autocmd InsertEnter * set nu nornu'
+vim.cmd 'autocmd InsertLeave * set nu rnu'
+
 -- Incremental search
 vim.opt.incsearch = true
 

@@ -429,5 +429,6 @@
     }
   },
   "vscode-neovim.wslDistribution": "Ubuntu",
-  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-nvim/init.lua"
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-nvim/init.lua",
+  "editor.lineNumbers": "off"
 }
