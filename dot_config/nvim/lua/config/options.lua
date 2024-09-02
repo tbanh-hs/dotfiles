@@ -10,6 +10,10 @@ local opt = vim.opt
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
+-- Line numbers
+vim.cmd("autocmd InsertEnter * set nu nornu")
+vim.cmd("autocmd InsertLeave * set nu rnu")
+
 if vim.fn.has([[wsl]]) == 1 then
   vim.g.netrw_browsex_viewer = "cmd.exe /C start"
 end
