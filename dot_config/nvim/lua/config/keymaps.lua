@@ -35,6 +35,9 @@ set("v", "c", [["_c]], opts)
 -- Yank to clipboard
 set({ "n", "v" }, "<leader>y", [["+y]], { desc = "[Y]ank selected to clipboard" })
 
+-- paste from system clipboard
+set({ "n", "v" }, "<leader>p", [["+p]], opts)
+
 -- Jump up/down while keeping cursor centered
 set("n", "<C-u>", "<C-u>zz")
 set("n", "<C-d>", "<C-d>zz")
@@ -43,6 +46,16 @@ set("n", "<C-d>", "<C-d>zz")
 set("n", "J", "mzJ`z")
 
 set("i", "jk", "<Esc>", opts)
+
+-- better indent handling
+set("v", "<", "<gv", opts)
+set("v", ">", ">gv", opts)
+
+-- move text up and down
+set("v", "J", ":m .+1<CR>==", opts)
+set("v", "K", ":m .-2<CR>==", opts)
+set("x", "J", ":move '>+1<CR>gv-gv", opts)
+set("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- regex helpers
 set("c", [[\\*]], [[\(.*\)]])
