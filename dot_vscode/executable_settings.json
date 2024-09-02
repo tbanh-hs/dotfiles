@@ -1,0 +1,433 @@
+{
+  "animations.Active": "Indent",
+  "animations.Command-Palette": "Fade",
+  "animations.Enabled": true,
+  "animations.Install-Method": "Apc Customize UI++",
+  "animations.Scrolling": "Fade",
+  "apc.activityBar": {
+    "size": 30
+  },
+  "apc.imports": [
+    "file:///c:/Users/tonyb/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+  ],
+  "apc.listRow": {
+    "fontSize": 14,
+    "height": 30,
+    "lists": ["explorer-folders-view", "quick-input-list", "results"]
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom"
+  },
+  "apc.stylesheet": {
+    ".editor-actions": "display: none !important",
+    ".editor-widget.suggest-widget": "border: 1px solid #FFCC66",
+    ".editor-widget.suggest-widget.shows-details.visible": "border: none",
+    // file icon alignment in search
+    ".filematch .monaco-icon-label:before, .custom-list-row.results .monaco-list-row .monaco-icon-label:before": "background-position: 0 bottom !important",
+    ".monaco-editor .scroll-decoration": "display: none !important",
+    ".monaco-tl-row .monaco-tl-contents > div::after": "margin-bottom: auto",
+    ".quick-input-list-entry .monaco-action-bar.quick-input-list-entry-action-bar": "align-self: center !important",
+    ".quick-input-list-row div::before": "align-self: center !important",
+    ".quick-input-widget": "transform: translateY(-50%) !important; top: 50% !important;",
+    ".sidebar": "border: none !important",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".sidebar .title-label h2": "line-height: 2.8 !important",
+    ".suggest-details": "border: 1px solid #FFCC66 !important"
+  },
+  "catppuccin-icons.hidesExplorerArrows": true,
+  "cody.autocomplete.formatOnAccept": true,
+  "cody.commandCodeLenses": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "'MesloLGS Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.minimap.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.renderWhitespace": "none",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.tabSize": 2,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "magit.forge-enabled": true,
+  "magit.quick-switch-enabled": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "whichkey.bindingOverrides": [
+    {
+      "keys": "!",
+      "position": -1
+    },
+    {
+      "keys": "\"",
+      "position": -1
+    },
+    {
+      "keys": "'",
+      "position": -1
+    },
+    {
+      "keys": "$",
+      "position": -1
+    },
+    {
+      "keys": "*",
+      "position": -1
+    },
+    {
+      "keys": ["."],
+      "position": -1
+    },
+    {
+      "keys": ["\t"],
+      "position": -1
+    },
+    {
+      "keys": "g.i",
+      "position": -1
+    },
+    {
+      "keys": "s.s",
+      "position": -1
+    },
+    {
+      "keys": "s.S",
+      "position": -1
+    },
+    {
+      "keys": "/",
+      "name": "Open new external terminal",
+      "type": "command",
+      "command": "workbench.action.terminal.openNativeConsole"
+    },
+    {
+      "keys": "c",
+      "name": "+Code",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "a",
+          "name": "Code action",
+          "type": "command",
+          "command": "editor.action.codeAction"
+        },
+        {
+          "key": "f",
+          "name": "Format region or buffer",
+          "type": "command",
+          "command": "editor.action.format"
+        },
+        {
+          "key": "F",
+          "name": "Format buffer",
+          "type": "command",
+          "command": "editor.action.formatDocument"
+        },
+        {
+          "key": "r",
+          "name": "Rename symbol",
+          "type": "command",
+          "command": "editor.action.rename"
+        },
+        {
+          "key": "R",
+          "name": "Rename file",
+          "type": "command",
+          "command": "file-browser.rename"
+        },
+        {
+          "key": "p",
+          "name": "Paste from clipboard",
+          "type": "command",
+          "command": "editor.action.clipboardPasteAction"
+        },
+        {
+          "key": "y",
+          "name": "Yank to clipboard",
+          "type": "commands",
+          "commands": [
+            "editor.action.clipboardCopyAction",
+            "vscode-neovim.escape"
+          ]
+        },
+        {
+          "key": "x",
+          "name": "[x] Markdown Checklist",
+          "type": "command",
+          "command": "markdown.extension.checkTaskList"
+        }
+      ]
+    },
+    {
+      "keys": "g.a",
+      "name": "Amend commit",
+      "type": "command",
+      "command": "git.commitAmend"
+    },
+    {
+      "keys": "g.b",
+      "name": "+Branch",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "b",
+          "name": "Checkout",
+          "type": "command",
+          "command": "git.checkout"
+        },
+        {
+          "key": "d",
+          "name": "Delete",
+          "type": "command",
+          "command": "git.deleteBranch"
+        },
+        {
+          "key": "r",
+          "name": "Rename",
+          "type": "command",
+          "command": "git.renameBranch"
+        },
+        {
+          "key": "R",
+          "name": "Rebase",
+          "type": "command",
+          "command": "git.rebase"
+        }
+      ]
+    },
+    {
+      "keys": "g.d",
+      "name": "Diff",
+      "type": "command",
+      "command": "magit.diff-file"
+    },
+    {
+      "keys": "g.D",
+      "name": "Discard changes in current file",
+      "type": "command",
+      "command": "git.clean"
+    },
+    {
+      "keys": "g.g",
+      "name": "Git",
+      "type": "command",
+      "command": "magit.status"
+    },
+    {
+      "keys": "g.G",
+      "name": "Git Graph",
+      "type": "command",
+      "command": "gitlens.showGraphPage"
+    },
+    {
+      "keys": "g.l",
+      "name": "Log file",
+      "type": "command",
+      "command": "magit.log-file"
+    },
+    {
+      "keys": "g.L",
+      "name": "Log branch(es)",
+      "type": "command",
+      "command": "magit.logging"
+    },
+    {
+      "keys": "g.o",
+      "name": "Open commit on remote",
+      "type": "command",
+      "command": "gitlens.openCommitOnRemote"
+    },
+    {
+      "keys": "g.p",
+      "name": "Pull",
+      "type": "command",
+      "command": "git.pull"
+    },
+    {
+      "keys": "g.P",
+      "name": "Push",
+      "type": "command",
+      "command": "git.push"
+    },
+    {
+      "keys": "g.s",
+      "name": "Stage",
+      "type": "command",
+      "command": "git.stage"
+    },
+    {
+      "keys": "g.S",
+      "name": "Stage all",
+      "type": "command",
+      "command": "git.stageAll"
+    },
+    {
+      "keys": "g.u",
+      "name": "Unstage",
+      "type": "command",
+      "command": "git.unstage"
+    },
+    {
+      "keys": "g.U",
+      "name": "Unstage all",
+      "type": "command",
+      "command": "git.unstageAll"
+    },
+    {
+      "keys": "g.z",
+      "name": "Stash",
+      "type": "command",
+      "command": "git.stash"
+    },
+    {
+      "keys": "g.Z",
+      "name": "Stash apply",
+      "type": "command",
+      "command": "git.stashApply"
+    },
+    {
+      "keys": "l",
+      "name": "+Logging",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Comment out all log messages",
+          "type": "command",
+          "command": "turboConsoleLog.commentAllLogMessages"
+        },
+        {
+          "key": "l",
+          "name": "Log message",
+          "type": "command",
+          "command": "turboConsoleLog.displayLogMessage"
+        },
+        {
+          "key": "d",
+          "name": "Delete log messages",
+          "type": "command",
+          "command": "turboConsoleLog.deleteAllLogMessages"
+        },
+        {
+          "key": "u",
+          "name": "Uncomment all log messages",
+          "type": "command",
+          "command": "turboConsoleLog.uncommentAllLogMessages"
+        }
+      ]
+    },
+    {
+      "keys": "m",
+      "name": "+Marks/Bookmarks",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Clear marks",
+          "type": "command",
+          "command": "bookmarks.clear"
+        },
+        {
+          "key": "C",
+          "name": "Clear all marks",
+          "type": "command",
+          "command": "bookmarks.clearFromAllFiles"
+        },
+        {
+          "key": "l",
+          "name": "List marks",
+          "type": "command",
+          "command": "bookmarks.listFromAllFiles"
+        },
+        {
+          "key": "n",
+          "name": "Jump to next",
+          "type": "command",
+          "command": "bookmarks.jumpToNext"
+        },
+        {
+          "key": "p",
+          "name": "Jump to previous",
+          "type": "command",
+          "command": "bookmarks.jumpToPrevious"
+        },
+        {
+          "key": "t",
+          "name": "Toggle mark",
+          "type": "command",
+          "command": "bookmarks.toggle"
+        },
+        {
+          "key": "T",
+          "name": "Toggle labled mark",
+          "type": "command",
+          "command": "bookmarks.toggleLabeled"
+        }
+      ]
+    },
+    {
+      "keys": "s.b",
+      "name": "Fuzzy search in current buffer",
+      "type": "command",
+      "command": "fuzzySearch.activeTextEditorWithCurrentSelection"
+    },
+    {
+      "keys": "s.B",
+      "name": "Fuzzy search with selection in current buffer",
+      "type": "commands",
+      "commands": [
+        "editor.action.addSelectionToNextFindMatch",
+        "fuzzySearch.activeTextEditorWithCurrentSelection"
+      ]
+    },
+    {
+      "keys": "s.f",
+      "name": "File/folder",
+      "type": "command",
+      "command": "file-browser.open"
+    }
+  ],
+  "whichkey.sortOrder": "nonNumberFirst",
+  "whichkey.showIcons": true,
+  "window.commandCenter": false,
+  "workbench.colorCustomizations": {
+    // Colors to match - https://github.com/ayu-theme/ayu-colors?tab=readme-ov-file
+    "editorSuggestWidget.selectedBackground": "#c1d6eb40",
+    "list.activeSelectionBackground": "#409FFF40",
+    "list.focusBackground": "#409FFF40",
+    "list.hoverBackground": "#409FFF40",
+    "list.inactiveSelectionBackground": "#409FFF40",
+    "terminalCursor.foreground": "#FFCC66"
+  },
+  "workbench.colorTheme": "Ayu Mirage",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.layoutControl.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.escape"
+    }
+  },
+  "vscode-neovim.wslDistribution": "Ubuntu",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-nvim/init.lua"
+}
