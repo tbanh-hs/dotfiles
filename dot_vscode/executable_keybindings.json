@@ -163,7 +163,7 @@
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft",
-    "when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
+    "when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor && !terminalFocus"
   },
   {
     "key": "ctrl+h",
@@ -178,7 +178,7 @@
   {
     "key": "ctrl+j",
     "command": "workbench.action.navigateDown",
-    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
+    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !terminalFocus"
   },
   {
     "key": "ctrl+j",
@@ -203,7 +203,7 @@
   {
     "key": "ctrl+k",
     "command": "workbench.action.navigateUp",
-    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
+    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !terminalFocus"
   },
   {
     "key": "ctrl+k",
@@ -243,7 +243,7 @@
   {
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight",
-    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
+    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor && !terminalFocus"
   },
   {
     "key": "ctrl+l",
