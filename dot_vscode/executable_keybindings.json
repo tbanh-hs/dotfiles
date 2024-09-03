@@ -301,6 +301,15 @@
   },
   // Magit
   {
+    "key": "p",
+    "command": "magit.pulling",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "F",
+    "command": "-magit.pulling"
+  },
+  {
     "key": "g g",
     "command": "cursorTop",
     "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
