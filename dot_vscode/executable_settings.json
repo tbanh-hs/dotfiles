@@ -423,7 +423,13 @@
     },
     {
       "keys": "s.f",
-      "name": "File/folder",
+      "name": "Find file in quick open",
+      "type": "command",
+      "command": "workbench.action.quickOpen"
+    },
+    {
+      "keys": "s.F",
+      "name": "Find file in file browser",
       "type": "command",
       "command": "file-browser.open"
     },
