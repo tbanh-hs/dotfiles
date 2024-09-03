@@ -110,6 +110,10 @@
       "position": -1
     },
     {
+      "keys": "w.x",
+      "position": -1
+    },
+    {
       "keys": "/",
       "name": "Open new external terminal",
       "type": "command",
@@ -125,6 +129,12 @@
           "name": "Code action",
           "type": "command",
           "command": "editor.action.codeAction"
+        },
+        {
+          "command": "workbench.panel.chat.view.copilot.focus",
+          "key": "c",
+          "name": "GitHub Copilot Chat",
+          "type": "command"
         },
         {
           "key": "f",
@@ -172,6 +182,22 @@
           "command": "markdown.extension.checkTaskList"
         }
       ]
+    },
+    {
+      "command": "renameFile",
+      "keys": "f.r",
+      "name": "Rename file",
+      "type": "command"
+    },
+    {
+      "keys": "f.R",
+      "position": -1
+    },
+    {
+      "command": "fileutils.removeFile",
+      "keys": "f.x",
+      "name": "Delete file",
+      "type": "command"
     },
     {
       "keys": "g.a",
@@ -400,7 +426,31 @@
       "name": "File/folder",
       "type": "command",
       "command": "file-browser.open"
-    }
+    },
+    {
+      "command": "workbench.action.closeAllGroups",
+      "keys": "w.D",
+      "name": "Close all editor groups",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.toggleMaximizeEditorGroup",
+      "keys": "w.m",
+      "name": "Maximize Editor Group Toggle",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.maximizeEditorHideSidebar",
+      "keys": "w.M",
+      "name": "Maximize Editor Group and Hide Sidebar",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.evenEditorWidths",
+      "keys": "w.r",
+      "name": "Reset Editor Group Sizes",
+      "type": "command"
+    },
   ],
   "whichkey.sortOrder": "nonNumberFirst",
   "whichkey.showIcons": true,
