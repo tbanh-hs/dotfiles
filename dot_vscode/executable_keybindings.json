@@ -127,11 +127,6 @@
   },
   {
     "key": "ctrl+[",
-    "command": "search.action.cancel",
-    "when": "listFocus && searchViewletVisible && !inputFocus"
-  },
-  {
-    "key": "ctrl+[",
     "command": "settings.action.clearSearchResults",
     "when": "inSettingsSearch"
   },
