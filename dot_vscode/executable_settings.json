@@ -250,15 +250,15 @@
     },
     {
       "keys": "g.g",
-      "name": "Git",
+      "name": "Git status",
       "type": "command",
       "command": "magit.status"
     },
     {
       "keys": "g.G",
-      "name": "Git Graph",
+      "name": "Git source control",
       "type": "command",
-      "command": "gitlens.showGraphPage"
+      "command": "workbench.view.scm"
     },
     {
       "keys": "g.l",
