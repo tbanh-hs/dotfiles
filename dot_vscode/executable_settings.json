@@ -200,6 +200,12 @@
       "type": "command"
     },
     {
+      "keys": "g.?",
+      "name": "Magit dispatch",
+      "type": "command",
+      "command": "magit.dispatch"
+    },
+    {
       "keys": "g.a",
       "name": "Amend commit",
       "type": "command",
