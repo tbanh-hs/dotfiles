@@ -390,5 +390,15 @@
     "key": "ctrl+w unknown",
     "command": "-workbench.action.decreaseViewWidth",
     "when": "!editorTextFocus && !isAuxiliaryWindowFocusedContext && !terminalFocus && neovim.mode != 'cmdline'"
-  }
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelVisible && panelFocus"
+  },
+  {
+    "key": "ctrl+shift-tab",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelVisible && panelFocus"
+  },
 ]
