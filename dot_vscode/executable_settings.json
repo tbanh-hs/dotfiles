@@ -158,7 +158,7 @@
           "key": "R",
           "name": "Rename file",
           "type": "command",
-          "command": "file-browser.rename"
+          "command": "fileutils.renameFile"
         },
         {
           "key": "p",
@@ -184,7 +184,7 @@
       ]
     },
     {
-      "command": "renameFile",
+      "command": "fileutils.renameFile",
       "keys": "f.r",
       "name": "Rename file",
       "type": "command"
