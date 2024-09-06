@@ -174,12 +174,6 @@
             "editor.action.clipboardCopyAction",
             "vscode-neovim.escape"
           ]
-        },
-        {
-          "key": "x",
-          "name": "[x] Markdown Checklist",
-          "type": "command",
-          "command": "markdown.extension.checkTaskList"
         }
       ]
     },
@@ -438,6 +432,12 @@
       "name": "Find file in file browser",
       "type": "command",
       "command": "file-browser.open"
+    },
+    {
+      "keys": "t.x",
+      "name": "[x] Markdown Checklist",
+      "type": "command",
+      "command": "markdown.extension.checkTaskList"
     },
     {
       "command": "workbench.action.closeAllGroups",
