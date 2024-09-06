@@ -492,5 +492,8 @@
   },
   "vscode-neovim.wslDistribution": "Ubuntu",
   "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-nvim/init.lua",
-  "editor.lineNumbers": "off"
+  "editor.lineNumbers": "off",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.preferences.jsxAttributeCompletionStyle": "braces",
+  "javascript.preferences.jsxAttributeCompletionStyle": "braces",
 }
