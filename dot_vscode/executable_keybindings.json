@@ -145,6 +145,19 @@
     "when": "inZenMode"
   },
   {
+    "key": "ctrl+[",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "list.focusParent",
+        "list.focusParent",
+        "list.focusDown",
+        "list.select"
+      ],
+    },
+    "when": "workbench.scm.active && listFocus && sideBarFocus"
+  },
+  {
     "key": "ctrl+`",
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
@@ -270,6 +283,17 @@
     "when": "firstMatchFocus"
   },
   {
+    "key": "ctrl+p",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.scm.action.focusPreviousResourceGroup",
+        "list.focusParent",
+      ],
+    },
+    "when":"workbench.scm.active && !listFocus && sideBarFocus && textInputFocus"
+  },
+  {
     "key": "shift-tab",
     "command": "workbench.action.previousEditorInGroup",
     "when": "(neovim.mode == 'normal' || neovim.mode == 'visual') && (editorTextFocus || !inputFocus)"
@@ -297,6 +321,11 @@
   {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.scm.action.focusNextResourceGroup",
+    "when":"workbench.scm.active && !listFocus && sideBarFocus"
   },
   // Magit
   {
