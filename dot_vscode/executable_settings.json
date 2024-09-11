@@ -4,6 +4,7 @@
   "animations.Enabled": true,
   "animations.Install-Method": "Apc Customize UI++",
   "animations.Scrolling": "Fade",
+  "animations.Tabs": "Slide",
   "apc.activityBar": {
     "size": 30
   },
