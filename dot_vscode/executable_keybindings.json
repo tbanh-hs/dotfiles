@@ -160,7 +160,7 @@
         "list.select"
       ],
     },
-    "when": "workbench.scm.active && listFocus && sideBarFocus"
+    "when": "workbench.scm.active && listFocus && sideBarFocus && !searchViewletFocus"
   },
   {
     "key": "ctrl+`",
