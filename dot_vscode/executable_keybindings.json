@@ -330,7 +330,7 @@
   {
     "key": "ctrl+n",
     "command": "workbench.scm.action.focusNextResourceGroup",
-    "when":"workbench.scm.active && !listFocus && sideBarFocus && workbench.scm.visible && workbench.scm.defaultViewLocation"
+    "when":"workbench.scm.active && !listFocus && sideBarFocus && workbench.scm.visible && !searchViewletFocus"
   },
   // Magit
   {
