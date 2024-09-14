@@ -241,7 +241,7 @@
       "keys": "g.d",
       "name": "Diff",
       "type": "command",
-      "command": "magit.diff-file"
+      "command": "git.openChange"
     },
     {
       "keys": "g.D",
