@@ -90,10 +90,6 @@
       "position": -1
     },
     {
-      "keys": ["."],
-      "position": -1
-    },
-    {
       "keys": ["\t"],
       "position": -1
     },
@@ -112,6 +108,12 @@
     {
       "keys": "w.x",
       "position": -1
+    },
+    {
+      "keys": ">",
+      "name": "Repeat recent",
+      "type": "command",
+      "command": "whichkey.repeatRecent"
     },
     {
       "keys": "/",
