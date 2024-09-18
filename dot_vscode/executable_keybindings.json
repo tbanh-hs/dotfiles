@@ -12,6 +12,11 @@
   },
   {
     "key": "ctrl+[",
+    "command": "list.closeFind",
+    "when": "listFocus && treeFindOpen"
+  },
+  {
+    "key": "ctrl+[",
     "command": "hideCodeActionWidget",
     "when": "codeActionMenuVisible"
   },
