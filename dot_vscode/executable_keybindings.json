@@ -290,7 +290,7 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "sideBarFocus && !inputFocus"
+    "when": "sideBarFocus && !inputFocus && !inCommandsPicker"
   },
   {
     "key": "space",
