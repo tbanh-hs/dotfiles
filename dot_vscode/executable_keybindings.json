@@ -6,9 +6,14 @@
     "when": "whichkeyVisible"
   },
   {
-    "key": "ctrl+/",
+    "key": "ctrl+shift+/",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "list.closeFind",
+    "when": "listFocus && treeFindOpen"
   },
   {
     "key": "ctrl+[",
@@ -141,9 +146,26 @@
     "when": "inZenMode"
   },
   {
+    "key": "ctrl+[",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "list.focusParent",
+        "list.focusParent",
+        "list.focusDown",
+        "list.select"
+      ],
+    },
+    "when": "workbench.scm.active && listFocus && sideBarFocus && !searchViewletFocus"
+  },
+  {
     "key": "ctrl+`",
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",
   },
   {
     "key": "ctrl+b",
@@ -273,7 +295,7 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "sideBarFocus && !inputFocus"
+    "when": "sideBarFocus && !inputFocus && !inCommandsPicker"
   },
   {
     "key": "space",
@@ -291,19 +313,36 @@
     "when": "(neovim.mode == 'normal' || neovim.mode == 'visual') && (editorTextFocus || !inputFocus)"
   },
   {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelVisible && panelFocus"
+  },
+  {
+    "key": "ctrl+shift-tab",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelVisible && panelFocus"
+  },
+  {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
   },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.scm.action.focusNextResourceGroup",
+    "when":"workbench.scm.active && !listFocus && sideBarFocus && workbench.scm.visible && !searchViewletFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.scm.action.focusPreviousResourceGroup",
+        "list.focusParent",
+      ],
+    },
+    "when":"workbench.scm.active && !listFocus && sideBarFocus && textInputFocus"
+  },
   // Magit
-  {
-    "key": "p",
-    "command": "magit.pulling",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "F",
-    "command": "-magit.pulling"
-  },
   {
     "key": "g g",
     "command": "cursorTop",
@@ -364,6 +403,15 @@
     "command": "-magit.reset-mixed"
   },
   {
+    "key": "p",
+    "command": "magit.pulling",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "F",
+    "command": "-magit.pulling"
+  },
+  {
     "key": "ctrl+u x",
     "command": "-magit.reset-hard"
   },
@@ -386,5 +434,18 @@
     "key": "ctrl+w unknown",
     "command": "-workbench.action.decreaseViewWidth",
     "when": "!editorTextFocus && !isAuxiliaryWindowFocusedContext && !terminalFocus && neovim.mode != 'cmdline'"
-  }
+  },
+  {
+    "key": "ctrl+/",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "q",
+    "command": "git.openFile",
+    "when": "inDiffEditor"
+  },
 ]
