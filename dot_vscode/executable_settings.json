@@ -499,4 +499,7 @@
   "typescript.inlayHints.parameterNames.enabled": "all",
   "typescript.preferences.jsxAttributeCompletionStyle": "braces",
   "javascript.preferences.jsxAttributeCompletionStyle": "braces",
+  "editor.linkedEditing": true,
+  "gitlens.telemetry.enabled": false,
+  "cody.telemetry.level": "off"
 }
