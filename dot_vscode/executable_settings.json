@@ -1,9 +1,9 @@
 {
-  "animations.Active": "Indent",
   "animations.Command-Palette": "Fade",
   "animations.Enabled": true,
   "animations.Install-Method": "Apc Customize UI++",
   "animations.Scrolling": "Fade",
+  "animations.Tabs": "Slide",
   "apc.activityBar": {
     "size": 30
   },
@@ -90,10 +90,6 @@
       "position": -1
     },
     {
-      "keys": ["."],
-      "position": -1
-    },
-    {
       "keys": ["\t"],
       "position": -1
     },
@@ -112,6 +108,12 @@
     {
       "keys": "w.x",
       "position": -1
+    },
+    {
+      "keys": ">",
+      "name": "Repeat recent",
+      "type": "command",
+      "command": "whichkey.repeatRecent"
     },
     {
       "keys": "/",
@@ -158,7 +160,7 @@
           "key": "R",
           "name": "Rename file",
           "type": "command",
-          "command": "file-browser.rename"
+          "command": "fileutils.renameFile"
         },
         {
           "key": "p",
@@ -174,17 +176,11 @@
             "editor.action.clipboardCopyAction",
             "vscode-neovim.escape"
           ]
-        },
-        {
-          "key": "x",
-          "name": "[x] Markdown Checklist",
-          "type": "command",
-          "command": "markdown.extension.checkTaskList"
         }
       ]
     },
     {
-      "command": "renameFile",
+      "command": "fileutils.renameFile",
       "keys": "f.r",
       "name": "Rename file",
       "type": "command"
@@ -246,7 +242,7 @@
       "keys": "g.d",
       "name": "Diff",
       "type": "command",
-      "command": "magit.diff-file"
+      "command": "git.openChange"
     },
     {
       "keys": "g.D",
@@ -440,6 +436,12 @@
       "command": "file-browser.open"
     },
     {
+      "keys": "t.x",
+      "name": "[x] Markdown Checklist",
+      "type": "command",
+      "command": "markdown.extension.checkTaskList"
+    },
+    {
       "command": "workbench.action.closeAllGroups",
       "keys": "w.D",
       "name": "Close all editor groups",
@@ -474,7 +476,8 @@
     "list.focusBackground": "#409FFF40",
     "list.hoverBackground": "#409FFF40",
     "list.inactiveSelectionBackground": "#409FFF40",
-    "terminalCursor.foreground": "#FFCC66"
+    "terminalCursor.foreground": "#FFCC66",
+    "tab.activeBorderTop": "#FFCC66",
   },
   "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "catppuccin-frappe",
@@ -492,5 +495,8 @@
   },
   "vscode-neovim.wslDistribution": "Ubuntu",
   "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-nvim/init.lua",
-  "editor.lineNumbers": "off"
+  "editor.lineNumbers": "off",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.preferences.jsxAttributeCompletionStyle": "braces",
+  "javascript.preferences.jsxAttributeCompletionStyle": "braces",
 }
