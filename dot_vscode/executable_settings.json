@@ -245,12 +245,6 @@
       "command": "git.openChange"
     },
     {
-      "keys": "g.D",
-      "name": "Discard changes in current file",
-      "type": "command",
-      "command": "git.clean"
-    },
-    {
       "keys": "g.g",
       "name": "Git status",
       "type": "command",
@@ -315,6 +309,18 @@
       "name": "Unstage all",
       "type": "command",
       "command": "git.unstageAll"
+    },
+    {
+      "keys": "g.x",
+      "name": "Discard changes in current file",
+      "type": "command",
+      "command": "git.clean"
+    },
+    {
+      "keys": "g.X",
+      "name": "Discard all changes",
+      "type": "command",
+      "command": "git.cleanAll"
     },
     {
       "keys": "g.z",
