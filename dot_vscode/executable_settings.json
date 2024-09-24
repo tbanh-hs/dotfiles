@@ -190,10 +190,10 @@
       "position": -1
     },
     {
-      "command": "fileutils.removeFile",
+      "commands": ["fileutils.removeFile", "workbench.action.focusFirstEditorGroup"],
       "keys": "f.x",
       "name": "Delete file",
-      "type": "command"
+      "type": "commands"
     },
     {
       "keys": "g.?",
