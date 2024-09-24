@@ -501,5 +501,11 @@
   "javascript.preferences.jsxAttributeCompletionStyle": "braces",
   "editor.linkedEditing": true,
   "gitlens.telemetry.enabled": false,
-  "cody.telemetry.level": "off"
+  "cody.telemetry.level": "off",
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "workbench.list.defaultFindMatchType": "contiguous",
 }
