@@ -190,10 +190,10 @@
       "position": -1
     },
     {
-      "command": "fileutils.removeFile",
+      "commands": ["fileutils.removeFile", "workbench.action.focusFirstEditorGroup"],
       "keys": "f.x",
       "name": "Delete file",
-      "type": "command"
+      "type": "commands"
     },
     {
       "keys": "g.?",
@@ -243,12 +243,6 @@
       "name": "Diff",
       "type": "command",
       "command": "git.openChange"
-    },
-    {
-      "keys": "g.D",
-      "name": "Discard changes in current file",
-      "type": "command",
-      "command": "git.clean"
     },
     {
       "keys": "g.g",
@@ -315,6 +309,18 @@
       "name": "Unstage all",
       "type": "command",
       "command": "git.unstageAll"
+    },
+    {
+      "keys": "g.x",
+      "name": "Discard changes in current file",
+      "type": "command",
+      "command": "git.clean"
+    },
+    {
+      "keys": "g.X",
+      "name": "Discard all changes",
+      "type": "command",
+      "command": "git.cleanAll"
     },
     {
       "keys": "g.z",
@@ -501,5 +507,12 @@
   "javascript.preferences.jsxAttributeCompletionStyle": "braces",
   "editor.linkedEditing": true,
   "gitlens.telemetry.enabled": false,
-  "cody.telemetry.level": "off"
+  "cody.telemetry.level": "off",
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "workbench.list.defaultFindMatchType": "contiguous",
+  "explorer.autoReveal": false,
 }
