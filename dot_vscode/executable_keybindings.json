@@ -156,7 +156,7 @@
         "list.select"
       ],
     },
-    "when": "workbench.scm.active && listFocus && sideBarFocus && !searchViewletFocus"
+    "when": "workbench.scm.active && view.workbench.scm.visible && listFocus && sideBarFocus"
   },
   {
     "key": "ctrl+`",
