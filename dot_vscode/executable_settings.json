@@ -471,6 +471,18 @@
       "name": "Reset Editor Group Sizes",
       "type": "command"
     },
+    {
+      "command": "workbench.action.debug.selectandstart",
+      "keys": "d.d",
+      "name": "Select and Start Debugging",
+      "type": "command"
+    },
+    {
+      "command": "extension.js-debug.createDebuggerTerminal",
+      "keys": "d.j",
+      "name": "JavaScript Debug Terminal",
+      "type": "command"
+    },
   ],
   "whichkey.sortOrder": "nonNumberFirst",
   "whichkey.showIcons": true,
@@ -515,4 +527,6 @@
   "markdown.updateLinksOnFileMove.enabled": "always",
   "workbench.list.defaultFindMatchType": "contiguous",
   "explorer.autoReveal": false,
+  "bookmarks.keepBookmarksOnLineDelete": true,
+  "debug.toolBarLocation": "docked",
 }
