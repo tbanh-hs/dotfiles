@@ -300,7 +300,7 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "activeEditorGroupEmpty && !whichkeyVisible && !terminalFocus"
+    "when": "activeEditorGroupEmpty && !whichkeyVisible && !inCommandsPicker && !inQuickOpen"
   },
   {
     "key": "space",
