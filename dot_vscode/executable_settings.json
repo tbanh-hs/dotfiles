@@ -478,6 +478,13 @@
       "type": "command"
     },
     {
+      "command": "editor.debug.action.showDebugHover",
+      "keys": "d.h",
+      "name": "Debug hover",
+      "type": "command",
+      "when": "editorTextFocus && inDebugMode"
+    },
+    {
       "command": "extension.js-debug.createDebuggerTerminal",
       "keys": "d.j",
       "name": "JavaScript Debug Terminal",
