@@ -472,6 +472,25 @@
       "type": "command"
     },
     {
+      "keys": "d.a",
+      "name": "+add",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Conditional breakpoint",
+          "type": "command",
+          "command": "editor.debug.action.conditionalBreakpoint"
+        },
+        {
+          "key": "l",
+          "name": "Logpoint",
+          "type": "command",
+          "command": "editor.debug.action.addLogPoint"
+        },
+      ]
+    },
+    {
       "command": "workbench.action.debug.selectandstart",
       "keys": "d.d",
       "name": "Select and Start Debugging",
