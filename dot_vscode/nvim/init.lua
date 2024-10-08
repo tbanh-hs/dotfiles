@@ -93,18 +93,22 @@ if vim.g.vscode then
   end)
 
   local vscode = require 'vscode'
+
+  set({ 'n' }, 'gr', function()
+    vscode.call 'editor.action.referenceSearch.trigger'
+  end, opts)
+
+  set({ 'n' }, 'gt', function()
+    vscode.call 'editor.action.goToTypeDefinition'
+  end, opts)
+
+  -- undo / redo
   set({ 'n' }, 'u', function()
     vscode.call 'undo'
   end, opts)
   set({ 'n' }, '<C-r>', function()
     vscode.call 'redo'
   end, opts)
-
-  local peekReferences = function()
-    vscode.call 'editor.action.referenceSearch.trigger'
-  end
-
-  set({ 'n' }, 'gr', peekReferences)
 
   -- diagnostics
   set({ 'n' }, ']d', function()
