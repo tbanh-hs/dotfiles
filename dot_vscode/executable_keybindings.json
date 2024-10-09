@@ -300,7 +300,7 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "activeEditorGroupEmpty && !whichkeyVisible && !inCommandsPicker && !inQuickOpen"
+    "when": "(activeEditorGroupEmpty || activeEditor ==='workbench.editors.errorEditor') && !whichkeyVisible && !inCommandsPicker && !inQuickOpen"
   },
   {
     "key": "space",
