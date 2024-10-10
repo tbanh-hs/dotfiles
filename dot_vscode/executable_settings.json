@@ -204,9 +204,9 @@
       "type": "command",
     },
     {
-      "command": "workbench.action.debug.selectandstart",
+      "command": "workbench.action.debug.disconnect",
       "keys": "d.d",
-      "name": "Select and Start Debugging",
+      "name": "Disconnect",
       "type": "command"
     },
     {
@@ -226,6 +226,12 @@
       "command": "editor.debug.action.addLogPoint",
       "keys": "d.l",
       "name": "Log point",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.debug.selectandstart",
+      "keys": "d.s",
+      "name": "Start debug",
       "type": "command"
     },
     {
