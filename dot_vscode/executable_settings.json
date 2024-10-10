@@ -122,6 +122,20 @@
       "command": "workbench.action.terminal.openNativeConsole"
     },
 
+    // +BUFFER
+    {
+      "command": "workbench.action.pinEditor",
+      "keys": "b.p",
+      "name": "Pin buffer",
+      "type": "command",
+    },
+    {
+      "command": "workbench.action.unpinEditor",
+      "keys": "b.P",
+      "name": "Unpin buffer",
+      "type": "command",
+    },
+
     // +Code
     {
       "keys": "c",
