@@ -6,7 +6,7 @@ return {
     build = "cd server && go build",
     opts = {
       keymaps = {
-        trigger = "<M-.>",
+        trigger = "<S-Space>",
       },
       behavior = {
         ignore_filetypes = { "", "markdown", "terminal" }, -- Filetypes to skip completions
