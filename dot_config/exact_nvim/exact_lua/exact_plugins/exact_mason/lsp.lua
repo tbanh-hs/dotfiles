@@ -28,7 +28,11 @@ return {
             },
           },
         },
-        cssls = {},
+        cssls = {
+          settings = {
+            css = { lint = { unknownAtRules = "ignore" } },
+          },
+        },
         lua_ls = {
           settings = {
             Lua = {
