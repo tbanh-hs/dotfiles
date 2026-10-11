@@ -3,6 +3,7 @@
 # (anything else there overrides the flavor, which is fine for tweaks):
 #   [flavor]
 #   dark = "matugen"
+#   light = "matugen"
 
 [mgr]
 cwd = { fg = "#7393b3" }
@@ -101,6 +102,7 @@ current = { bg = "#323c41" }
 [icon]
 prepend_conds = [
   { if = "dir", text = "󰉋", fg = "#7393b3" },
+  { if = "!dir", text = "", fg = "#d3c6aa" },
 ]
 
 [filetype]

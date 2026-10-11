@@ -3,6 +3,7 @@
 # (anything else there overrides the flavor, which is fine for tweaks):
 #   [flavor]
 #   dark = "matugen"
+#   light = "matugen"
 
 [mgr]
 cwd = { fg = "{{ colors.secondary.default.hex }}" }
@@ -101,6 +102,7 @@ current = { bg = "{{ base16.base01.default.hex }}" }
 [icon]
 prepend_conds = [
   { if = "dir", text = "󰉋", fg = "{{ colors.secondary.default.hex }}" },
+  { if = "!dir", text = "", fg = "{{ colors.on_surface.default.hex }}" },
 ]
 
 [filetype]

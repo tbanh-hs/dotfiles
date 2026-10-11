@@ -1,5 +1,6 @@
 [flavor]
 dark = "matugen"
+light = "matugen"
 
 # https://github.com/yazi-rs/plugins/tree/main/git.yazi
 [git]
