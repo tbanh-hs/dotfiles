@@ -1,0 +1,5 @@
+{
+  "tui.altScreen.halfPageUp": "ctrl+u",
+  "tui.altScreen.halfPageDown": "ctrl+d",
+  "tui.input.newLine": "shift+enter"
+}

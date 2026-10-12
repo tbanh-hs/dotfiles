@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "npm:@ff-labs/pi-fff",
+    "npm:@sting8k/pi-vcc",
+    "npm:@tintinweb/pi-subagents",
+    "npm:@tintinweb/pi-tasks",
+    "npm:pi-sandbox",
+    "npm:pi-side-chat",
+    "npm:pi-web-access",
+    "npm:pi-zentui"
+  ],
+  "lastChangelogVersion": "1.1.0",
+  "showHardwareCursor": true
+}
