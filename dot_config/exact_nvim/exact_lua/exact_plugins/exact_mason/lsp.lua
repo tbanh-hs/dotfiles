@@ -52,9 +52,6 @@ return {
             },
           },
         },
-        taplo = {
-          enabled = false,
-        },
         tombi = {},
       },
     },
