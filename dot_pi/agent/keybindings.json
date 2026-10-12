@@ -1,5 +1,19 @@
 {
-  "tui.altScreen.halfPageUp": "ctrl+u",
-  "tui.altScreen.halfPageDown": "ctrl+d",
-  "tui.input.newLine": "shift+enter"
+  "app.editor.external": ["ctrl+e"],
+  "app.message.copy": ["ctrl+y"],
+  "app.message.dequeue": ["ctrl+up"],
+  "app.model.cycleForward": [],
+  "app.models.reorderDown": [],
+  "app.session.new": ["alt+n"],
+  "app.session.togglePath": [],
+  "app.session.toggleNamedFilter": [],
+  "tui.altScreen.bottom": ["ctrl+alt+g"],
+  "tui.altScreen.top": ["ctrl+g"],
+  "tui.altScreen.halfPageDown": ["ctrl+d"],
+  "tui.altScreen.halfPageUp": ["ctrl+u"],
+  "tui.editor.cursorLineEnd": ["end"],
+  "tui.editor.cursorLineStart": ["home"],
+  "tui.input.newLine": ["shift+enter"],
+  "tui.select.down": ["down", "ctrl+n"],
+  "tui.select.up": ["up", "ctrl+p"]
 }
