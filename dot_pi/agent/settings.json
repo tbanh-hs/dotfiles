@@ -6,9 +6,13 @@
     "npm:@tintinweb/pi-tasks",
     "npm:pi-sandbox",
     "npm:pi-side-chat",
-    "npm:pi-web-access",
-    "npm:pi-zentui"
+    "npm:pi-web-access"
   ],
+  "defaultModel": "z-ai/glm-5.3",
+  "defaultProvider": "nvidia",
+  "doubleEscapeAction": "tree",
+  "enableInstallTelemetry": false,
   "lastChangelogVersion": "1.1.0",
-  "showHardwareCursor": true
+  "showHardwareCursor": true,
+  "theme": "system"
 }
