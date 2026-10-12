@@ -4,15 +4,17 @@
     "npm:@sting8k/pi-vcc",
     "npm:@tintinweb/pi-subagents",
     "npm:@tintinweb/pi-tasks",
+    "npm:pi-freeflow",
     "npm:pi-sandbox",
     "npm:pi-side-chat",
     "npm:pi-web-access"
   ],
-  "defaultModel": "z-ai/glm-5.3",
-  "defaultProvider": "nvidia",
+  "defaultModel": "muse-spark-1.3-contributor-free",
+  "defaultProvider": "freeflow",
   "doubleEscapeAction": "tree",
   "enableInstallTelemetry": false,
   "lastChangelogVersion": "1.1.0",
   "showHardwareCursor": true,
-  "theme": "system"
+  "theme": "matugen",
+  "hideThinkingBlock": false
 }
