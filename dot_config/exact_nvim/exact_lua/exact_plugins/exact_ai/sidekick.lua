@@ -35,6 +35,11 @@ return {
         opencode = {
           cmd = { "zsh", "-c", 'opencode "$@"; exit', "zsh" },
         },
+        maki = {
+          cmd = { "zsh", "-c", 'maki "$@"; exit', "zsh" },
+          is_proc = "\\<maki\\>",
+          continue = { "--resume" },
+        },
       },
     },
     nes = {

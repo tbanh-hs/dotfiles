@@ -56,3 +56,7 @@ output_path = "~/.config/ghostty/themes/matugen"
 [templates.wezterm]
 input_path = "./templates/wezterm.toml"
 output_path = "~/.config/wezterm/colors/matugen.toml"
+
+[templates.maki]
+input_path = "./templates/maki.toml"
+output_path = "~/.config/maki/themes/matugen.toml"

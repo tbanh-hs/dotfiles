@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime": {
+    "version": "LuaJIT",
+    "path": [
+      "lua/?.lua",
+      "lua/?/init.lua",
+      "packages/maki-vim-mode/lua/?.lua",
+      "packages/maki-vim-mode/lua/?/init.lua",
+      "packages/maki-freeflow/lua/?.lua",
+      "packages/maki-freeflow/lua/?/init.lua"
+    ]
+  },
+  "diagnostics": {
+    "globals": [
+      "maki"
+    ]
+  },
+  "workspace": {
+    "checkThirdParty": false,
+    "library": [
+      ".luadefs/maki.lua"
+    ]
+  }
+}

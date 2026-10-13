@@ -1,0 +1,6 @@
+[infron]
+display_name = "Infron"
+protocol = "openai"
+base_url = "https://llm.onerouter.pro/v1"
+api_key_env = "INFRON_API_KEY"
+discover_models = true
