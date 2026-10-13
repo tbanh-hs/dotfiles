@@ -125,7 +125,7 @@ keymap = [
   { on = [
     "c",
     "d",
-  ], run = "copy dirname", desc = "Copy the directory path" },
+  ], run = "copy dirpath", desc = "Copy the directory path" },
   { on = [
     "c",
     "f",
@@ -337,13 +337,12 @@ keymap = [
   ], run = "tab_swap 1", desc = "Swap current tab with next tab" },
 
   # Tasks
-  { on = "w", run = "tasks_show", desc = "Show task manager" },
+  { on = "w", run = "tasks:show", desc = "Show task manager" },
 
-  # Follow symlink
   { on = [
     "g",
     "x",
-  ], run = "plugin follow-link", desc = "Go to the symlink original directory" },
+  ], run = "follow", desc = "Go to the symlink original directory" },
 
   # Help
   { on = [
@@ -405,7 +404,7 @@ desc = "Paste system clipboard files"
 keymap = [
   { on = "<Esc>", run = "close", desc = "Close task manager" },
   { on = "<C-c>", run = "close", desc = "Close task manager" },
-  { on = "w", run = "close", desc = "Close task manager" },
+  { on = "q", run = "close", desc = "Close task manager" },
 
   { on = "k", run = "arrow -1", desc = "Move cursor up" },
   { on = "j", run = "arrow 1", desc = "Move cursor down" },
@@ -430,7 +429,7 @@ keymap = [
 
   # Copy
   { on = ["c", "c"], run = "copy cell", desc = "Copy selected cell" },
-  { on = "y", run = "yank cell", desc = "Copy selected cell" },
+  { on = "y", run = "copy cell", desc = "Copy selected cell" },
 
   # Help
   { on = ["g", "?"], run = "help", desc = "Open help" },
@@ -553,7 +552,7 @@ keymap = [
   { on = "<C-c>", run = "close", desc = "Cancel completion" },
   { on = "<Enter>", run = [
     "close --submit",
-    "close_input --submit",
+    "input:close --submit",
   ], desc = "Submit the completion and input" },
 
   { on = "<C-p>", run = "arrow -1", desc = "Move cursor up" },
@@ -581,7 +580,4 @@ keymap = [
   { on = "<C-n>", run = "arrow 1", desc = "Move cursor down" },
   { on = "<Up>", run = "arrow -1", desc = "Move cursor up" },
   { on = "<Down>", run = "arrow 1", desc = "Move cursor down" },
-
-  # Filtering
-  { on = "/", run = "filter", desc = "Apply a filter for the help items" },
 ]
