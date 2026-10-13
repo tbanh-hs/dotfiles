@@ -19,7 +19,7 @@ title = " "
 macos-titlebar-style = hidden
 macos-titlebar-proxy-icon = hidden
 
-keybind = shift+enter=text:\x1b[13;2u
+keybind = shift+enter=text:\x1b\r
 keybind = ctrl+enter=unbind
 keybind = ctrl+,=unbind
 
