@@ -4,12 +4,15 @@ def installing?
   ARGV.empty? || ARGV.any? { |arg| arg == "install" }
 end
 
+cask "ghostty"
+cask "wezterm"
+
 # Yazi + dependencies
 brew "fd"
-brew "ffmpeg-full"
+brew "ffmpeg-full", link: true
 cask "font-symbols-only-nerd-font"
 brew "fzf"
-brew "imagemagick-full"
+brew "imagemagick-full", link: true
 brew "jq"
 brew "poppler"
 brew "resvg"
@@ -20,6 +23,10 @@ brew "zoxide"
 
 tap "anomalyco/tap"
 brew "anomalyco/tap/opencode"
+
+tap "raine/workmux"
+brew "raine/workmux/workmux"
+
 brew "atuin"
 brew "bat"
 brew "btop"
@@ -32,9 +39,6 @@ brew "lazygit"
 brew "llama.cpp"
 brew "neovim"
 brew "node"
-tap "raine/workmux"
-brew "raine/workmux/workmux"
-brew "resterm"
 brew "sesh"
 brew "starship"
 brew "terminal-browser"
@@ -42,9 +46,7 @@ brew "tmux"
 brew "uv"
 brew "worktrunk"
 
-cask "ghostty"
-cask "wezterm"
-
+# Non-brew packages, mac AND linux
 if installing?
   # Oh My Zsh
   system 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended' unless Dir.exist?("#{ENV["HOME"]}/.oh-my-zsh")
@@ -81,6 +83,7 @@ end
 
 if OS.linux?
   brew "zsh"
+  brew "resterm"
 
   if installing?
     system "yay -S portmaster-bin"
