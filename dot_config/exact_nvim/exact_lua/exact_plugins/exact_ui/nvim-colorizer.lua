@@ -4,6 +4,7 @@ return {
   opts = {
     filetypes = {
       "*",
+      "!atlas-ui.repository",
       "!grug-far",
       "!lazy",
       "!sidekick_terminal",

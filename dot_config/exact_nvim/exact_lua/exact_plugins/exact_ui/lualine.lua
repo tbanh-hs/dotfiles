@@ -1,4 +1,5 @@
 local disabled_filetypes = {
+  "atlas-ui",
   "Diffview*",
   "Trouble",
   "checkhealth",
