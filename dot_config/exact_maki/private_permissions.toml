@@ -1,0 +1,15 @@
+[bash]
+allow = [
+    "which *",
+    "echo *",
+    "cat *",
+    "git *",
+    "maki *",
+    "strings *",
+    "tail *",
+    "wc *",
+    "ls *",
+    "find *",
+    "grep *",
+    "head *",
+]
