@@ -9,10 +9,6 @@ output_path = "~/.config/lazygit/matugen.yml"
 input_path = "./templates/delta.gitconfig"
 output_path = "~/.config/delta/matugen.gitconfig"
 
-[templates.gh-dash]
-input_path = "./templates/gh-dash.yml"
-output_path = "~/.config/gh-dash/matugen.yml"
-
 [templates.opencode]
 input_path = "./templates/opencode.json"
 output_path = "~/.config/opencode/themes/matugen.json"
