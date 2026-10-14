@@ -6,11 +6,11 @@
     },
     "maki-review": {
       "src": "https://github.com/MrBanh/maki-review",
-      "rev": "29bc83e7bfdfe1ec86735dd8c6f3c975ab2902d1"
+      "rev": "024867d4c22030c5e9e4ad38eb251bd2eea990a2"
     },
     "maki-vim-mode": {
       "src": "https://github.com/MrBanh/maki-vim-mode",
-      "rev": "349acc1125b96dba6d4dae757f73d27c4b2a689d"
+      "rev": "e4849688748adf5f54ef95486013109297851177"
     }
   }
 }

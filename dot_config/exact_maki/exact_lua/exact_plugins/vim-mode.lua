@@ -15,7 +15,7 @@ maki.pack.add({
 				normal_leader = "space",
 				enter_submit = true,
 				insert_after_submit = true,
-				system_clipboard_register = true,
+				clipboard = "yank",
 			},
 		},
 	},
