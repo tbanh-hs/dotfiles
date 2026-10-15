@@ -1,21 +1,29 @@
--- Do NOT swap back to mini.pairs. It doesn't work well with backticks `
--- Example:
+-- Prefer ultimate-autopair
 --- mini: hello |world -> hello `|world -> hello `world| -> hello `world``
---- nvim-autopairs: hello |world -> hello `|world -> hello `world| -> hello `world`
+--- nvim-autopairs: (|) 🡒 <BS> 🡒 |)
+
 return {
   {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
+    "altermo/ultimate-autopair.nvim",
+    event = { "InsertEnter", "CmdlineEnter" },
+    branch = "v0.6",
     opts = {
-      disable_filetype = {
-        "grug-far",
-        "markdown",
-        "sidekick_ask",
-        "snacks_input",
-        "snacks_picker_input",
+      close = {
+        enable = false, -- doesn't work in multiline
       },
-      map_c_w = true, -- map <c-w> to delete a pair if possible
-      check_ts = true,
+      cr = {
+        autoclose = true,
+      },
+      fastwarp = {
+        map = "<C-)>",
+        rmap = "<C-(>",
+        cmap = "<C-)>",
+        rcmap = "<C-(>",
+        nocursormove = false,
+      },
+      tabout = {
+        enable = false, -- doesn't work in multiline
+      },
     },
   },
   {
