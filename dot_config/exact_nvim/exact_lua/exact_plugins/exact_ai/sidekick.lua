@@ -19,7 +19,6 @@ return {
         wo = {
           scrolloff = 0, -- prevent global scrolloff from shifting terminal view on toggle
         },
-        layout = vim.g.floating_terminal and "float" or "right", ---@type "float"|"left"|"bottom"|"top"|"right"
         float = {
           width = 0.6,
           height = 0.6,

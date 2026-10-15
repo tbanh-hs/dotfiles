@@ -57,9 +57,6 @@ vim.filetype.add({
   },
 })
 
--- Personal - controls floating terminal for various plugins.
-vim.g.floating_terminal = false
-
 -- Plugin/distro specific --
 
 -- LazyVim: use ai suggestion in cmp, false shows inline suggestion
