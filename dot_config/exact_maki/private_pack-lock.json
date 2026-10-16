@@ -2,7 +2,7 @@
   "packages": {
     "maki-freeflow": {
       "src": "https://github.com/MrBanh/maki-freeflow",
-      "rev": "ded65b23a130103f5323c1ca7f7792db6230da22"
+      "rev": "892023137fe9f47d247e06f8770743a768f601a8"
     },
     "maki-review": {
       "src": "https://github.com/MrBanh/maki-review",
@@ -10,7 +10,7 @@
     },
     "maki-vim-mode": {
       "src": "https://github.com/MrBanh/maki-vim-mode",
-      "rev": "e4849688748adf5f54ef95486013109297851177"
+      "rev": "124d48c0df8656d0110c93bf32f2d428ec61c2ae"
     }
   }
 }
