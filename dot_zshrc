@@ -1,9 +1,9 @@
 # Put brew env variable and eval in .zprofile, which gets loaded before .zshrc
 ## troubleshooting:
-### Delete any paths set by deno/bun *
-### Rebuild zcompdump: `rm -f ~/.zcompdump; compinit`
-### `chmod -R go-w "$(brew --prefix)/share"
-### `zsh -l --sourcetrace`
+### deno/bun prepend to PATH on install — inspect spill: `echo $PATH | tr ':' '\n'`
+### rebuild completion dump: `rm ~/.zcompdump*` (oh-my-zsh regenerates next shell)
+### fix "insecure completion directories": `chmod -R go-w "$(brew --prefix)/share"`
+### trace rc sourcing / profile startup: `PS4='+%T %N:%i> ' zsh -xilc 'exit' 2>/tmp/zsh-trace.log`
 
 if command -v starship &>/dev/null; then
   eval "$(starship init zsh)"
@@ -14,104 +14,71 @@ if command -v wt >/dev/null 2>&1; then
   eval "$(command wt config shell init zsh)"
 fi
 
-# Path to your oh-my-zsh installation.
+## Fresh-machine bootstrap: shallow-clone oh-my-zsh if it's missing.
 export ZSH="$HOME/.oh-my-zsh"
+[[ -d "$ZSH" ]] || git clone --depth 1 https://github.com/ohmyzsh/ohmyzsh.git "$ZSH"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
+# oh-my-zsh settings: https://github.com/ohmyzsh/ohmyzsh/wiki/Settings
+# zstyle ':omz:update' mode auto        # alternatives: disabled, reminder
 # zstyle ':omz:update' frequency 13
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+# ===================
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# PLUGINS MANAGEMENT
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+plugins=()
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+## Plugins that requires git clone or plugin manager
+custom_plugins=(
+  zsh-users/zsh-completions
+  jeffreytse/zsh-vi-mode
+)
+for repo in $custom_plugins; do
+  [[ -d "${ZSH_CUSTOM:-$ZSH/custom}/plugins/${repo:t}" ]] ||
+    git clone -q --depth 1 "https://github.com/$repo" "${ZSH_CUSTOM:-$ZSH/custom}/plugins/${repo:t}"
+  plugins+=("${repo:t}")
+done
+unset repo custom_plugins
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  # requires installation
-  zsh-completions
-  zsh-vi-mode
-
-  # built-in
-  git
+## Built-in OMZ plugins
+plugins+=(
   ssh-agent
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
-autoload -U compinit && (
-  compinit &
-  compinit -C
-)
+update_zsh_plugins() {
+  # external (non-OMZ) plugins cloned into $ZSH_CUSTOM/plugins.
+  local dir before
+  for dir in "${ZSH_CUSTOM:-$ZSH/custom}"/plugins/*(/N); do
+    [[ -d "$dir/.git" ]] || continue
+    before="$(git -C "$dir" rev-parse HEAD)"
+    if ! git -C "$dir" pull --ff-only -q 2>/dev/null; then
+      print "ff-update failed for ${dir:t}; removing for clean re-clone" >&2
+      rm -rf "$dir"
+      continue
+    fi
+    [[ "$before" == "$(git -C "$dir" rev-parse HEAD)" ]] || print "${dir:t}: updated"
+  done
+  # internal (OMZ) plugins
+  omz update
+}
 
 # ===================
 
 # ENVIRONMENT VARIABLES
 
-## Language settings
 export LANG=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-## Misc Settings
 export EDITOR='nvim'
 export XDG_CONFIG_HOME="$HOME/.config"
 
+## Disable folder highlights with `ls`
 LS_COLORS=$LS_COLORS:'ow=1;34:'
-export LS_COLORS # Disables folder highlight with 'ls' (wsl)
+export LS_COLORS
 
 # Only start tmux automatically in standalone terminals, not in IDEs
 # Docs: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux
-if
-  [[ 
-    "$TERM_PROGRAM" != "zed" &&
-    "$TERM_PROGRAM" != "vscode" ]]
-then
-
+if [[ "$TERM_PROGRAM" != "zed" && "$TERM_PROGRAM" != "vscode" ]]; then
   plugins+=(tmux)
 
   ## Tmux - https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/tmux/README.md
@@ -144,11 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # ===================
 
 # ALIASES
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+## For a full list of active aliases, run `alias`.
 
 alias gg="lazygit"
 alias ls="eza --icons=always --group-directories-last --color=auto -h -l"
@@ -181,12 +144,12 @@ cm() {
 ### Changes cwd when exiting yazi
 ### `y` to start, `q` to quit and have CWD change, `Q` to quit
 function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
+  local tmp cwd
+  tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+  command yazi "$@" --cwd-file="$tmp"
+  cwd="$(command cat -- "$tmp")"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+  command rm -f -- "$tmp"
 }
 
 # See: https://github.com/atuinsh/atuin/issues/977
@@ -208,30 +171,17 @@ function zvm_after_init() {
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" || -f /proc/sys/fs/binfmt_misc/WSLInterop ]]; then
   alias open="gio open"
 
-  function zvm_vi_yank() {
-    zvm_yank
-    echo "$CUTBUFFER" | clip.exe
-    zvm_exit_visual_mode
-  }
-
-## Mac
-elif [[ $(uname) == "Darwin" ]]; then
-  function zvm_vi_yank() {
-    zvm_yank
-    echo ${CUTBUFFER} | pbcopy
-    zvm_exit_visual_mode
-  }
-
 ## Linux
 elif [[ $(uname) == "Linux" ]]; then
-  function zvm_vi_yank() {
-    zvm_yank
-    echo ${CUTBUFFER} | wl-copy -n
-    zvm_exit_visual_mode
-  }
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 fi
+
+## Yank visual-mode selection to the system clipboard via oh-my-zsh's clipboard lib
+function zvm_vi_yank() {
+  zvm_yank
+  echo "${CUTBUFFER}" | clipcopy
+  zvm_exit_visual_mode
+}
 
 # Dynamically set GH_HOST based on git remote origin
 set_gh_host() {
@@ -280,5 +230,6 @@ set_gh_host
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export PATH="$HOME/.bun/bin:$PATH"
 
-# Go
-export PATH="$(go env GOPATH)/bin:$PATH"
+# Go (avoid forking `go env` on every shell start)
+export GOPATH="${GOPATH:-$HOME/go}"
+export PATH="$GOPATH/bin:$PATH"
