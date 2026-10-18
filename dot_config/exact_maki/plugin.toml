@@ -1,7 +1,0 @@
-# init.lua scope: workmux-status shells out via maki.fn.jobstart/jobwait
-# (run); the maki.pack.add src paths are built with maki.env.config_dir()
-# (fs_read). vim-mode and freeflow carry their own grants in their package
-# plugin.toml files now.
-[permissions]
-run = true
-fs_read = true

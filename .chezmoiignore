@@ -8,8 +8,6 @@ README.md
 **/opencode/package.json
 **/ccmux.js
 **/__pycache__/**
-**/maki/packages
-**/maki/pack-lock.json.lock
 !.config/yazi/flavors/matugen.yazi/
 !obsidian-vault/templates
 !obsidian-vault/templates/**
