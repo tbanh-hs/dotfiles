@@ -4,6 +4,7 @@
     "npm:@banh-me/pi-vim",
     "npm:@ff-labs/pi-fff",
     "npm:@gotgenes/pi-subagents",
+    "npm:@juicesharp/rpiv-advisor",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:@juicesharp/rpiv-todo",
     "npm:@juicesharp/rpiv-web-tools",
