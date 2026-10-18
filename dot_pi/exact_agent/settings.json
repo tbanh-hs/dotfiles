@@ -1,0 +1,34 @@
+{
+  "packages": [
+    "npm:@bacnh85/pi-notify",
+    "npm:@banh-me/pi-vim",
+    "npm:@ff-labs/pi-fff",
+    "npm:@gotgenes/pi-subagents",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@juicesharp/rpiv-web-tools",
+    "npm:pi-blackhole",
+    "npm:pi-freeflow"
+  ],
+  "defaultTools": ["+codemode"],
+  "doubleEscapeAction": "tree",
+  "enableInstallTelemetry": false,
+  "lastChangelogVersion": "1.3.0",
+  "showHardwareCursor": true,
+  "theme": "matugen",
+  "hideThinkingBlock": false,
+  "defaultProvider": "freeflow",
+  "defaultModel": "glm-5.3-flash-free",
+  "piVim": {
+    "enabled": true,
+    "clipboardMirror": "yank",
+    "initial_mode": "insert",
+    "langmap": {
+      "H": "^",
+      "L": "$"
+    },
+    "escape_sequence": "jk",
+    "enter_submit": true,
+    "insert_after_submit": true
+  }
+}
