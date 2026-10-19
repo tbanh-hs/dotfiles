@@ -46,6 +46,11 @@ path = "~/.config/opencode"
 startup_command = "nvim"
 
 [[session]]
+name = "pi config"
+path = "~/.pi/agent"
+startup_command = "nvim"
+
+[[session]]
 name = "sesh config"
 path = "~/.config/sesh"
 startup_command = "nvim sesh.toml"
