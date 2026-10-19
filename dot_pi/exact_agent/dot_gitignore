@@ -1,7 +1,5 @@
 pi-freeflow*
 pi-freeflow-daemon-src
-pi-blackhole/*
-!pi-blackhole/pi-blackhole-config.json
 extensions
 npm
 fff

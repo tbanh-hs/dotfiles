@@ -23,8 +23,6 @@ obsidian-vault/.obsidian
 
 **/*pi-freeflow*
 **/pi-freeflow-daemon-src
-**/pi-blackhole/*
-!**/pi-blackhole/pi-blackhole-config.json
 .pi/**/extensions
 .pi/**/npm
 .pi/**/fff
