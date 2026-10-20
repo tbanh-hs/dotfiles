@@ -13,25 +13,23 @@
   "mcp": {},
   "lsp": true,
   "provider": {
-    "openrouter": {
-      "models": {
-        "~google/gemini-flash-latest": {
-          "options": {
-            "provider": {
-              "order": ["google-ai-studio"],
-              "allow_fallbacks": true,
-              "data_collection": "deny",
-            },
-          },
-        },
-      },
-    },
     "infronai": {
       "name": "Infron AI",
       "npm": "@ai-sdk/openai-compatible",
       "options": {
         "baseURL": "https://llm.onerouter.pro/v1",
         "apiKey": "{env:INFRON_API_KEY}",
+        "modelsDiscovery": {
+          "enabled": true,
+        },
+      },
+    },
+    "phoenix-grove": {
+      "name": "Phoenix Grove",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://api.pgsgrove.com/v1",
+        "apiKey": "{env:PGS_API_KEY}",
         "modelsDiscovery": {
           "enabled": true,
         },
