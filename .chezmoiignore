@@ -3,9 +3,11 @@ README.md
 **/.git
 **/node_modules
 **/bun.lock
+**/opencode/plugins
 **/opencode-notifier-state.json
 **/opencode/package-lock.json
 **/opencode/package.json
+**/opencode/.workmux-status.json
 **/ccmux.js
 **/__pycache__/**
 !.config/yazi/flavors/matugen.yazi/
@@ -29,6 +31,7 @@ obsidian-vault/.obsidian
 .pi/**/sessions
 .pi/**/models-store.json
 .pi/**/auth.json
+.pi/**/token
 
 {{- if eq .user.host "personal" }}
 {{- else if eq .user.host "work" }}
