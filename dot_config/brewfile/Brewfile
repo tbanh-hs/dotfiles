@@ -6,6 +6,7 @@ end
 
 cask "ghostty"
 cask "wezterm"
+cask "terminal-browser"
 
 # Yazi + dependencies
 brew "fd"
@@ -41,7 +42,6 @@ brew "neovim"
 brew "node"
 brew "sesh"
 brew "starship"
-brew "terminal-browser"
 brew "tmux"
 brew "uv"
 brew "worktrunk"
@@ -64,7 +64,7 @@ if installing?
   system 'curl --proto "=https" --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y' unless File.exist?("#{cargo_bin}/rustup")
 
   if File.exist?("#{cargo_bin}/cargo")
-    system "#{cargo_bin}/cargo install matugen"
+    system "#{cargo_bin}/cargo install matugen --registry crates-io"
   else
     warn "Skipping matugen: cargo not found. Install the Rust toolchain (rustup) first."
   end

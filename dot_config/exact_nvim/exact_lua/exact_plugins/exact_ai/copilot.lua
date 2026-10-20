@@ -18,12 +18,9 @@ return {
             telemetryLevel = "off",
           },
         },
-        on_attach = function(client, bufnr)
-          local ft = vim.bo[bufnr].filetype
-          if vim.tbl_contains(disabled_filetypes, ft) then
-            vim.schedule(function()
-              vim.lsp.buf_detach_client(bufnr, client.id)
-            end)
+        root_dir = function(bufnr, on_dir)
+          if not vim.tbl_contains(disabled_filetypes, vim.bo[bufnr].filetype) then
+            on_dir(vim.fs.root(bufnr, ".git"))
           end
         end,
         keys = {

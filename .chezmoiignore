@@ -43,4 +43,5 @@ obsidian-vault/.obsidian
 .config/opencode/plugins/paseo-terminal-activity.js
 .config/opencode/skills/herdr
 .config/opencode/skills/playwright-cli
+.pi
 {{- end }}

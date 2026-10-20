@@ -1,20 +1,5 @@
 return {
   {
-    "artemave/workspace-diagnostics.nvim",
-    opts = {},
-    config = function(_, opts)
-      require("workspace-diagnostics").setup(opts)
-
-      Snacks.util.lsp.on(function(buf, client)
-        if client:supports_method("workspace/diagnostic", buf) then
-          vim.lsp.buf.workspace_diagnostics({ client_id = client.id })
-        else
-          require("workspace-diagnostics").populate_workspace_diagnostics(client, buf)
-        end
-      end)
-    end,
-  },
-  {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },
