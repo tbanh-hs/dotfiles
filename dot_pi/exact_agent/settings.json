@@ -1,7 +1,7 @@
 {
   "$schema": "https://pi.dev/schemas/settings.schema.json",
   "packages": [
-    "npm:@bacnh85/pi-notify",
+    "npm:@banh-me/pi-model-costs",
     "npm:@banh-me/pi-vim",
     "npm:@ff-labs/pi-fff",
     "npm:@juicesharp/rpiv-advisor",
@@ -11,8 +11,8 @@
     "npm:pi-freeflow",
     "npm:pi-subagents-lite"
   ],
-  "defaultProvider": "infron",
-  "defaultModel": "deepseek/deepseek-v4.1-flash:free",
+  "defaultProvider": "freeflow",
+  "defaultModel": "glm-5.3-flash-free",
   "defaultTools": ["+codemode"],
   "doubleEscapeAction": "tree",
   "enableInstallTelemetry": false,
@@ -20,13 +20,6 @@
   "showHardwareCursor": true,
   "theme": "matugen",
   "hideThinkingBlock": true,
-  "notify": {
-    "onComplete": true,
-    "onError": false,
-    "onQuestion": true,
-    "sound": true,
-    "volume": 0.2
-  },
   "piVim": {
     "enabled": true,
     "clipboardMirror": "yank",
