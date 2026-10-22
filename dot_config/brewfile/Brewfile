@@ -6,7 +6,6 @@ end
 
 cask "ghostty"
 cask "wezterm"
-cask "terminal-browser"
 
 # Yazi + dependencies
 brew "fd"

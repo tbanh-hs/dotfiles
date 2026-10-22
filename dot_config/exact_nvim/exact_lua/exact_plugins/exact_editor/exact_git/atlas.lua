@@ -31,13 +31,29 @@ return {
         ---@type AtlasGitHubPullsConfig
         github = {
           views = {
-            { name = "My Pull Requests", key = "1", search = "is:pr author:@me is:open" },
-            { name = "Needs My Review", key = "2", search = "is:pr review-requested:@me is:open" },
-            { name = "Involved", key = "3", search = "is:pr -author:@me involves:@me is:open" },
+            {
+              name = "My Pull Requests",
+              key = "1",
+              search = "is:pr author:@me is:open",
+              current_repo = true,
+            },
+            {
+              name = "Needs My Review",
+              key = "2",
+              search = "is:pr review-requested:@me is:open",
+              current_repo = true,
+            },
+            {
+              name = "Involved",
+              key = "3",
+              search = "is:pr -author:@me involves:@me is:open",
+              current_repo = true,
+            },
             {
               name = "All (recent 2 weeks)",
               key = "4",
               search = "is:pr is:open updated:>=" .. os.date("%Y-%m-%d", os.time() - 14 * 24 * 60 * 60),
+              current_repo = true,
             },
           },
         },
@@ -46,9 +62,24 @@ return {
         ---@type AtlasGitHubIssuesConfig
         github = {
           views = {
-            { name = "My Issues", key = "1", search = "author:@me is:open" },
-            { name = "Assigned", key = "2", search = "assignee:@me is:open" },
-            { name = "Involved", key = "3", search = "involves:@me -author:@me is:open" },
+            {
+              name = "My Issues",
+              key = "1",
+              search = "author:@me is:open",
+              current_repo = true,
+            },
+            {
+              name = "Assigned",
+              key = "2",
+              search = "assignee:@me is:open",
+              current_repo = true,
+            },
+            {
+              name = "Involved",
+              key = "3",
+              search = "involves:@me -author:@me is:open",
+              current_repo = true,
+            },
           },
         },
       },

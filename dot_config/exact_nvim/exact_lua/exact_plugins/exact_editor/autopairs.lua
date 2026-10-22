@@ -1,4 +1,4 @@
--- Prefer ultimate-autopair
+-- Prefer ultimate-autopair; better defaults and can work in markdown code blocks
 --- mini: hello |world -> hello `|world -> hello `world| -> hello `world``
 --- nvim-autopairs: (|) 🡒 <BS> 🡒 |)
 
@@ -13,6 +13,17 @@ return {
       },
       cr = {
         autoclose = true,
+      },
+      extensions = {
+        filetype = {
+          nft = {
+            "grug-far",
+            "markdown",
+            "sidekick_ask",
+            "snacks_input",
+            "snacks_picker_input",
+          },
+        },
       },
       fastwarp = {
         map = "<C-)>",
