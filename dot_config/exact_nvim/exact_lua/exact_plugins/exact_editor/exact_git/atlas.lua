@@ -17,6 +17,12 @@ return {
         },
       },
       pulls = {
+        repo_config = {
+          paths = {
+            ["banh-me/*"] = "~/src/*",
+            ["banh-me/dotfiles"] = "~/.local/share/chezmoi",
+          },
+        },
         git_transport = "ssh", -- "https" or "ssh" for Atlas-managed Git remotes.
         diff = {
           layout = "side-by-side", -- "inline" or "side-by-side".
