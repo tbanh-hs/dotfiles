@@ -1,0 +1,82 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+min_version = "2026.10.19"
+
+[vars]
+zsh_custom = "{{ env.ZSH_CUSTOM | default(value=env.HOME ~ '/.oh-my-zsh/custom') }}"
+
+[settings]
+idiomatic_version_file_enable_tools = ["rust"]
+cargo.registry_name = "crates-io"
+
+[tools]
+node = "latest"
+"npm:@getpaseo/cli" = "latest"
+rust = { version = "stable", profile = "default" }
+"cargo:matugen" = "latest"
+
+[bootstrap.packages]
+# Yazi + dependencies
+"brew-cask:font-symbols-only-nerd-font" = "latest"
+"brew:fd" = "latest"
+"brew:ffmpeg-full" = "latest"
+"brew:fzf" = "latest"
+"brew:imagemagick-full" = "latest"
+"brew:jq" = "latest"
+"brew:poppler" = "latest"
+"brew:resvg" = "latest"
+"brew:ripgrep" = "latest"
+"brew:sevenzip" = "latest"
+"brew:yazi" = "latest"
+"brew:zoxide" = "latest"
+
+"brew:anomalyco/tap/opencode" = "latest"
+"brew:raine/workmux/workmux" = "latest"
+"brew:atuin" = "latest"
+"brew:bat" = "latest"
+"brew:btop" = "latest"
+"brew:chezmoi" = "latest"
+"brew:eza" = "latest"
+"brew:gh" = "latest"
+"brew:git" = "latest"
+"brew:git-delta" = "latest"
+"brew:lazygit" = "latest"
+"brew:llama.cpp" = "latest"
+"brew:neovim" = "latest"
+"brew:sesh" = "latest"
+"brew:starship" = "latest"
+"brew:tmux" = "latest"
+"brew:uv" = "latest"
+
+"brew-cask:ghostty" = { os = "macos" }
+"pacman:ghostty" = { os = "linux" }
+
+"brew-cask:wezterm" = { os = "macos" }
+"pacman:wezterm" = { os = "linux" }
+
+# MacOS-only
+"brew:reattach-to-user-namespace" = { os = "macos" }
+"brew-cask:raycast" = { os = "macos" }
+"brew:FelixKratz/formulae/borders" = { os = "macos" }
+
+# Linux-only
+"brew:zsh" = { os = "linux" }
+"brew:resterm" = { os = "linux" }
+"aur:portmaster-bin" = { os = "linux" }
+"aur:vicinae-bin" = { os = "linux" }
+"pacman:libnotify" = { os = "linux" }
+
+[bootstrap.repos]
+"~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
+"{{ vars.zsh_custom }}/plugins/zsh-completions" = { url = "https://github.com/zsh-users/zsh-completions.git" }
+"{{ vars.zsh_custom }}/plugins/zsh-vi-mode" = { url = "https://github.com/jeffreytse/zsh-vi-mode.git" }
+
+[bootstrap.hooks.pre-packages]
+run = "sh {{ xdg_config_home }}/mise/scripts/preflight.sh"
+
+[bootstrap.user]
+login_shell = "zsh"
+
+[tasks.bootstrap]
+description = "Link the full media tools"
+run = "brew link ffmpeg-full imagemagick-full"
