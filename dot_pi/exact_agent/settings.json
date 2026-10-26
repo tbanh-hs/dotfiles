@@ -30,6 +30,13 @@
     },
     "escape_sequence": "jk",
     "enter_submit": true,
-    "insert_after_submit": true
+    "insert_after_submit": true,
+    "cursor_shape": {
+      "normal": "block",
+      "insert": "bar",
+      "replace": "underline",
+      "visual": "block",
+      "visualLine": "block"
+    }
   }
 }
