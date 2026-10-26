@@ -5,6 +5,13 @@
 ### fix "insecure completion directories": `chmod -R go-w "$(brew --prefix)/share"`
 ### trace rc sourcing / profile startup: `PS4='+%T %N:%i> ' zsh -xilc 'exit' 2>/tmp/zsh-trace.log`
 
+# Homebrew first, so every `command -v` check below can see brew-installed tools
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 if command -v mise &>/dev/null; then
   eval "$(mise activate zsh)"
 fi
@@ -162,10 +169,6 @@ function zvm_after_init() {
 ## WSL
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" || -f /proc/sys/fs/binfmt_misc/WSLInterop ]]; then
   alias open="gio open"
-
-## Linux
-elif [[ $(uname) == "Linux" ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 ## Yank visual-mode selection to the system clipboard via oh-my-zsh's clipboard lib
