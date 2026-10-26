@@ -29,9 +29,10 @@ obsidian-vault/.obsidian
 .pi/**/npm
 .pi/**/fff
 .pi/**/sessions
-.pi/**/models-store.json
 .pi/**/auth.json
+.pi/**/models-store.json
 .pi/**/token
+.pi/**/toolcall-audit.jsonl
 
 {{- if eq .user.host "personal" }}
 {{- else if eq .user.host "work" }}
