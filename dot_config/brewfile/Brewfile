@@ -43,7 +43,6 @@ brew "sesh"
 brew "starship"
 brew "tmux"
 brew "uv"
-brew "worktrunk"
 
 # Non-brew packages, mac AND linux
 if installing?
