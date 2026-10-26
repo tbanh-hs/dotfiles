@@ -5,6 +5,10 @@
 ### fix "insecure completion directories": `chmod -R go-w "$(brew --prefix)/share"`
 ### trace rc sourcing / profile startup: `PS4='+%T %N:%i> ' zsh -xilc 'exit' 2>/tmp/zsh-trace.log`
 
+if command -v mise &>/dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
 if command -v starship &>/dev/null; then
   eval "$(starship init zsh)"
   export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
