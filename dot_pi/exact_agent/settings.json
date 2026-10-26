@@ -11,8 +11,8 @@
     "npm:pi-freeflow",
     "npm:pi-subagents-lite"
   ],
-  "defaultProvider": "freeflow",
-  "defaultModel": "glm-5.3-flash-free",
+  "defaultProvider": "phoenix-grove",
+  "defaultModel": "deepseek-v4.1-flash-1017",
   "defaultTools": ["+codemode"],
   "doubleEscapeAction": "tree",
   "enableInstallTelemetry": false,
@@ -30,6 +30,13 @@
     },
     "escape_sequence": "jk",
     "enter_submit": true,
-    "insert_after_submit": true
+    "insert_after_submit": true,
+    "cursor_shape": {
+      "normal": "block",
+      "insert": "bar",
+      "replace": "underline",
+      "visual": "block",
+      "visualLine": "block"
+    }
   }
 }

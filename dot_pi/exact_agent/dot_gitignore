@@ -2,6 +2,7 @@ pi-freeflow*
 pi-freeflow-daemon-src
 extensions
 npm
+git
 fff
 sessions
 models-store.json
