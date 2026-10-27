@@ -71,3 +71,8 @@ name = "zsh config"
 path = "~/"
 startup_command = "nvim .zshrc"
 preview_command = "bat --color=always ~/.zshrc"
+
+[[session]]
+name = "mise - work"
+path = "~/.config/mise/conf.d"
+startup_command = "nvim work.toml"
