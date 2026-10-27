@@ -28,6 +28,7 @@ return {
           layout = "side-by-side", -- "inline" or "side-by-side".
           lsp = {
             enabled = true,
+            link = { "node_modules" },
           },
           explorer = {
             preview = true, -- Show a file as soon as the explorer cursor moves onto it.
