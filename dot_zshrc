@@ -123,18 +123,6 @@ if [[ "$CLAUDECODE" != "1" ]]; then
   eval "$(zoxide init zsh --cmd cd)"
 fi
 
-## Chezmoi
-cm() {
-  if [[ "$1" == "add" || "$1" == "forget" || "$1" == "re-add" ]]; then
-    chezmoi "$@" || return $?
-    if [[ -d ~/dotfiles-work ]]; then
-      chezmoi -S ~/dotfiles-work "$@"
-    fi
-  else
-    chezmoi "$@"
-  fi
-}
-
 ## Yazi - https://yazi-rs.github.io/docs/quick-start
 ### Changes cwd when exiting yazi
 ### `y` to start, `q` to quit and have CWD change, `Q` to quit

@@ -71,9 +71,3 @@ name = "zsh config"
 path = "~/"
 startup_command = "nvim .zshrc"
 preview_command = "bat --color=always ~/.zshrc"
-
-[[session]]
-name = "chezmoi - work"
-path = "~/dotfiles-work"
-startup_command = "chezmoi -S {} re-add && lazygit && tmux kill-session"
-windows = ["nvim"]
