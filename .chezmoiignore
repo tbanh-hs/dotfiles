@@ -4,6 +4,7 @@ README.md
 **/node_modules
 **/bun.lock
 **/opencode/plugins
+**/opencode/skills
 **/opencode-notifier-state.json
 **/opencode/package-lock.json
 **/opencode/package.json
