@@ -82,7 +82,7 @@ return {
 
           LspReferenceText = { bg = palette.bg1 },
           LspReferenceRead = { link = "LspReferenceText" },
-          LspCodeLens = { fg = palette.grey1, bg = palette.bg1, italic = true },
+          LspCodeLens = { fg = palette.grey1, bg = palette.none, dim = true, italic = true },
 
           SnacksDiffContextLineNr = {
             bg = palette.none,
