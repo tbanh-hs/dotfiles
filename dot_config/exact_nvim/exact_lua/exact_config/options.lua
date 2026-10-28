@@ -74,3 +74,5 @@ vim.g.root_spec = { "cwd" }
 
 -- log level
 -- vim.lsp.set_log_level("info")
+
+vim.g.lazyvim_ts_lsp = "tsgo" ---@type 'vtsls' | 'tsgo'
