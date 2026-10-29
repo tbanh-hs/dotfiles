@@ -7,7 +7,9 @@ return {
     lazy = true,
     ft = ft,
     opts = {
-      -- Filetypes this plugin will run on.
+      anti_conceal = {
+        enabled = false,
+      },
       file_types = ft,
       heading = {
         icons = { "󰼏 ", "󰎨 ", "󰼑 ", "󰎲 ", "󰼓 ", "󰎴 " },
