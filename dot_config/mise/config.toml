@@ -11,7 +11,7 @@ cargo.registry_name = "crates-io"
 
 [tools]
 node = "latest"
-"npm:@getpaseo/cli" = "latest"
+"npm:@getpaseo/cli" = { version = "latest", os = "linux" }
 rust = { version = "stable", profile = "default" }
 "cargo:matugen" = "latest"
 
