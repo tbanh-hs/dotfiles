@@ -1,6 +1,7 @@
 # UI
 theme = matugen
 background-opacity = 0.9
+background-opacity-cells = true
 background-blur = true
 
 # Font
