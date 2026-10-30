@@ -15,6 +15,7 @@ README.md
 !obsidian-vault/templates
 !obsidian-vault/templates/**
 .config/ccmux/session-pids
+.config/mise/**local.toml
 .config/mise/conf.d
 .config/mise/config.local.toml
 .config/nvim/.claude
@@ -41,6 +42,7 @@ obsidian-vault/.obsidian
 {{- else if eq .user.host "work" }}
 **/hubspot.init.lua
 **/hubspot
+**/*hubspot*
 .config/nvim/lua/overseer/template/hubspot
 .config/opencode/AGENTS.md
 .config/opencode/opencode.json

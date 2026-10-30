@@ -13,9 +13,13 @@ cargo.registry_name = "crates-io"
 bun = "latest"
 go = "latest"
 node = "latest"
-"npm:@getpaseo/cli" = { version = "latest", os = "linux" }
-rust = { version = "stable", profile = "default" }
+rust = "latest"
+
 "cargo:matugen" = "latest"
+"npm:@getpaseo/cli" = "latest"
+
+[bootstrap.hooks.pre-packages]
+run = "sh {{ xdg_config_home }}/mise/scripts/preflight.sh"
 
 [bootstrap.packages]
 # Yazi + dependencies
@@ -42,19 +46,20 @@ rust = { version = "stable", profile = "default" }
 "brew:gh" = "latest"
 "brew:git" = "latest"
 "brew:git-delta" = "latest"
-"brew:lazygit" = "latest"
 "brew:llama.cpp" = "latest"
+"brew:lazygit" = "latest"
 "brew:neovim" = "latest"
+"brew:resterm" = "latest"
 "brew:sesh" = "latest"
 "brew:starship" = "latest"
 "brew:tmux" = "latest"
 "brew:uv" = "latest"
 
 "brew-cask:ghostty" = { os = "macos" }
-"pacman:ghostty" = { os = "linux" }
+"pacman:ghostty" = "latest"
 
 "brew-cask:wezterm" = { os = "macos" }
-"pacman:wezterm" = { os = "linux" }
+"pacman:wezterm" = "latest"
 
 # MacOS-only
 "brew:reattach-to-user-namespace" = { os = "macos" }
@@ -63,18 +68,17 @@ rust = { version = "stable", profile = "default" }
 
 # Linux-only
 "brew:zsh" = { os = "linux" }
-"brew:resterm" = { os = "linux" }
-"aur:portmaster-bin" = { os = "linux" }
-"aur:vicinae-bin" = { os = "linux" }
-"pacman:libnotify" = { os = "linux" }
+"aur:portmaster-bin" = "latest"
+"aur:vicinae-bin" = "latest"
+"pacman:libnotify" = "latest"
 
 [bootstrap.repos]
 "~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
 "{{ vars.zsh_custom }}/plugins/zsh-completions" = { url = "https://github.com/zsh-users/zsh-completions.git" }
 "{{ vars.zsh_custom }}/plugins/zsh-vi-mode" = { url = "https://github.com/jeffreytse/zsh-vi-mode.git" }
 
-[bootstrap.hooks.pre-packages]
-run = "sh {{ xdg_config_home }}/mise/scripts/preflight.sh"
+[bootstrap.services.mise-tool-update]
+builtin = "tool-update"
 
 [bootstrap.user]
 login_shell = "zsh"
