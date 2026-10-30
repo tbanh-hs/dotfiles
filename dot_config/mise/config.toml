@@ -10,6 +10,8 @@ idiomatic_version_file_enable_tools = ["rust"]
 cargo.registry_name = "crates-io"
 
 [tools]
+bun = "latest"
+go = "latest"
 node = "latest"
 "npm:@getpaseo/cli" = { version = "latest", os = "linux" }
 rust = { version = "stable", profile = "default" }

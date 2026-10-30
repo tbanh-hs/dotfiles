@@ -196,17 +196,3 @@ add-zsh-hook chpwd set_gh_host
 # Run once on shell startup
 set_gh_host
 
-# ==================
-
-# EXTERNAL TOOL ENVIRONMENTS
-
-# Rust/cargo
-[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
-
-# bun
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-export PATH="$HOME/.bun/bin:$PATH"
-
-# Go (avoid forking `go env` on every shell start)
-export GOPATH="${GOPATH:-$HOME/go}"
-export PATH="$GOPATH/bin:$PATH"
